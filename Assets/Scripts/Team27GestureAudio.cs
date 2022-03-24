@@ -2,18 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class AudioStem
-{
-    public AudioSource rhythmSource;
-    public AudioSource harmonySource;
-}
 
 public class Team27GestureAudio : MonoBehaviour
 {
     public static Team27GestureAudio Instance;
 
     public enum WhichWall { Wall1, Wall2, Wall3, Wall4}
-    public Dictionary<int, AudioStem> activeStems;
+    public List<AudioStem> activeStems;
     public AudioStem[] stems;
 
     void Awake()
@@ -30,7 +25,10 @@ public class Team27GestureAudio : MonoBehaviour
 
     void Start()
     {
-        foreach(AudioStem stem in stems)
+        activeStems.Add(stems[1]);
+        activeStems.Add(stems[2]);
+        activeStems.Add(stems[3]);
+         foreach(AudioStem stem in stems)
         {
             stem.rhythmSource.volume = 0f;
             stem.rhythmSource.Play();
@@ -41,10 +39,12 @@ public class Team27GestureAudio : MonoBehaviour
 
     public void GestureReceived(Vector3 controllerPosition, Vector3 controllerVelocity)
     {
+        Debug.DrawRay(controllerPosition, controllerVelocity, Color.green, 1f);
         if(Physics.Raycast(controllerPosition, controllerVelocity, out RaycastHit hit, 20f))
         {
             if (hit.transform.gameObject.CompareTag("TriggerWall"))
             {
+                Debug.Log("I hit the trigger wall: " + hit.transform.gameObject.name);
                 WhichWall hitWall = hit.transform.gameObject.GetComponent<WhichWallHolder>().whichWall;
                 if(hitWall == WhichWall.Wall1)
                 {
@@ -54,7 +54,7 @@ public class Team27GestureAudio : MonoBehaviour
                 {
                     BumpStems(1);
                 }
-                else if(hitWall == WhichWall.Wall2)
+                else if(hitWall == WhichWall.Wall3)
                 {
                     BumpStems(2);
                 }
@@ -63,27 +63,32 @@ public class Team27GestureAudio : MonoBehaviour
                     BumpStems(3);
                 }
             }
+            else
+            {
+                Debug.Log("I hit nothing.");
+            }
         }
     }
 
     void BumpStems(int sentValue)
     {
+       Debug.Log("Bumping the stems with: " + stems[sentValue].name + "from int: " + sentValue);
         //at some point, implement play trigger sound
 
-        if(activeStems[0] != stems[sentValue] && activeStems[1] != stems[sentValue])
-        {
             //turn off last audiosource
             activeStems[2].rhythmSource.volume = 0f;
+            Debug.Log("Turning down volume on: " + activeStems[2].rhythmSource.name);
             //bump on deck to last, disable harmony
             activeStems[2] = activeStems[1];
             activeStems[2].harmonySource.volume = 0f;
+            Debug.Log("Turning down volume on: " + activeStems[2].harmonySource.name);
             //bump most recent to on deck
             activeStems[1] = activeStems[0];
             //set most recent to the sent value
             activeStems[0] = stems[sentValue];
             activeStems[0].rhythmSource.volume = 1f;
             activeStems[0].harmonySource.volume = 1f;
-        }
+        
 
             
     }
