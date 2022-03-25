@@ -10,6 +10,7 @@ public class CalibrateGesture : MonoBehaviour
     public GameObject countdownPanel;
     public TextMeshProUGUI countdownText;
     public Transform leftHandTransform, rightHandTransform;
+    public GestureTrigger leftHandTrigger, rightHandTrigger;
     Vector3 rightHandPrevPos, leftHandPrevPos;
     public bool isCalibrating;
     public float maxCalibratedVelocity;
@@ -39,8 +40,8 @@ public class CalibrateGesture : MonoBehaviour
     {
         if (isCalibrating)
         {
-            float rightSpeed = (rightHandTransform.position - rightHandPrevPos).magnitude * Time.deltaTime;
-            float leftSpeed = (leftHandTransform.position - leftHandPrevPos).magnitude * Time.deltaTime;
+            float rightSpeed = rightHandTrigger.currentVelocity.magnitude;
+            float leftSpeed = leftHandTrigger.currentVelocity.magnitude;
 
             //Debug.Log("right speed is: " + rightSpeed);
 
@@ -78,7 +79,7 @@ public class CalibrateGesture : MonoBehaviour
         countdownPanel?.SetActive(false);
         isCalibrating = false;
 
-        rightHandTransform.gameObject.GetComponent<GestureTrigger>().triggerSpeed = maxCalibratedVelocity * percentOfMaxTrigger;
-        leftHandTransform.gameObject.GetComponent<GestureTrigger>().triggerSpeed = maxCalibratedVelocity * percentOfMaxTrigger;
+        rightHandTrigger.triggerSpeed = maxCalibratedVelocity * percentOfMaxTrigger;
+        leftHandTrigger.triggerSpeed = maxCalibratedVelocity * percentOfMaxTrigger;
     }
 }
