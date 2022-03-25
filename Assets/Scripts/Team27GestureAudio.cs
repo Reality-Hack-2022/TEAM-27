@@ -72,22 +72,26 @@ public class Team27GestureAudio : MonoBehaviour
 
     void BumpStems(int sentValue)
     {
-       Debug.Log("Bumping the stems with: " + stems[sentValue].name + "from int: " + sentValue);
+       //Debug.Log("Bumping the stems with: " + stems[sentValue].name + "from int: " + sentValue);
         //at some point, implement play trigger sound
 
             //turn off last audiosource
             activeStems[2].rhythmSource.volume = 0f;
-            Debug.Log("Turning down volume on: " + activeStems[2].rhythmSource.name);
+        activeStems[2].rhythmKickReaktion.volume = 0f;
+        activeStems[2].rhythmSnareReaktion.volume = 0f;
+            //Debug.Log("Turning down volume on: " + activeStems[2].rhythmSource.name);
             //bump on deck to last, disable harmony
             activeStems[2] = activeStems[1];
             activeStems[2].harmonySource.volume = 0f;
-            Debug.Log("Turning down volume on: " + activeStems[2].harmonySource.name);
+            //Debug.Log("Turning down volume on: " + activeStems[2].harmonySource.name);
             //bump most recent to on deck
             activeStems[1] = activeStems[0];
             //set most recent to the sent value
             activeStems[0] = stems[sentValue];
             activeStems[0].rhythmSource.volume = 1f;
             activeStems[0].harmonySource.volume = 1f;
+        activeStems[0].rhythmKickReaktion.volume = 1f;
+        activeStems[0].rhythmSnareReaktion.volume = 1f;
         
 
             

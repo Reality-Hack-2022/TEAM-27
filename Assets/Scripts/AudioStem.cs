@@ -7,6 +7,8 @@ public class AudioStem : MonoBehaviour
 
         public AudioSource rhythmSource;
         public AudioSource harmonySource;
+    public AudioSource rhythmKickReaktion;
+    public AudioSource rhythmSnareReaktion;
     // Start is called before the first frame update
     void Start()
     {
