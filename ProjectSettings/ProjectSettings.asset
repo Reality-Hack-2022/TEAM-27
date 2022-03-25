@@ -129,9 +129,10 @@ PlayerSettings:
     Others: 1
   bundleVersion: 0.1
   preloadedAssets:
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: -4926218755300067834, guid: 1993dadba1e330d448183a7e78be8fcb, type: 2}
   - {fileID: -6982333037406973822, guid: 2400d94959aa6684a808689a9e5a2901, type: 2}
-  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -591,7 +592,8 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    14: 
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
@@ -639,6 +641,7 @@ PlayerSettings:
       GazeInput: True
       SpatialPerception: True
       InternetClient: True
+      WebCam: True
       Microphone: True
   metroTargetDeviceFamilies: {}
   metroFTAName: 

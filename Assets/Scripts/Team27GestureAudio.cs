@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 
-
 public class Team27GestureAudio : MonoBehaviour
 {
     public static Team27GestureAudio Instance;
