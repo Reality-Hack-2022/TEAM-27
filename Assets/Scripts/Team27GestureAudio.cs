@@ -77,6 +77,8 @@ public class Team27GestureAudio : MonoBehaviour
 
             //turn off last audiosource
             activeStems[2].rhythmSource.volume = 0f;
+        activeStems[2].rhythmKickReaktion.volume = 0f;
+        activeStems[2].rhythmSnareReaktion.volume = 0f;
             Debug.Log("Turning down volume on: " + activeStems[2].rhythmSource.name);
             //bump on deck to last, disable harmony
             activeStems[2] = activeStems[1];
@@ -88,6 +90,8 @@ public class Team27GestureAudio : MonoBehaviour
             activeStems[0] = stems[sentValue];
             activeStems[0].rhythmSource.volume = 1f;
             activeStems[0].harmonySource.volume = 1f;
+        activeStems[0].rhythmKickReaktion.volume = 1f;
+        activeStems[0].rhythmSnareReaktion.volume = 1f;
         
 
             
