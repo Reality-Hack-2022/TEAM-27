@@ -107,8 +107,11 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.SceneUnderstanding
         {
             // This method called everytime a SceneObject created by the SU observer
             // The eventData contains everything you need do something useful
+            Debug.Log("On Observation Added");
 
             AddToData(eventData.Id);
+
+            Debug.Log("After Add to data.");
 
             if (observedSceneObjects.TryGetValue(eventData.SpatialObject.SurfaceType, out Dictionary<int, SpatialAwarenessSceneObject> sceneObjectDict))
             {
@@ -118,7 +121,19 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.SceneUnderstanding
             {
                 observedSceneObjects.Add(eventData.SpatialObject.SurfaceType, new Dictionary<int, SpatialAwarenessSceneObject> { { eventData.Id, eventData.SpatialObject } });
             }
+
+            Debug.Log("Right before foreach loop. Number of quads is: " + eventData.SpatialObject.Quads.Count);
+
+            //added, experiment?
+                Material chosenMat = funMaterials[Random.Range(0, funMaterials.Length)];
+
+                Debug.Log(eventData.SpatialObject.GameObject.name + " is having its material changed, allegedly, to: " + chosenMat);
+            MeshRenderer newRenderer = eventData.SpatialObject.GameObject.GetComponentInChildren<MeshRenderer>();
+            newRenderer.material = chosenMat;
+                //quad.GameObject.GetComponent<Renderer>().material.color = ColorForSurfaceType(eventData.SpatialObject.SurfaceType);
             
+            Debug.Log("After foreach loop.");
+
             if (InstantiatePrefabs && eventData.SpatialObject.Quads.Count > 0)
             {
                 var prefab = Instantiate(InstantiatedPrefab);
@@ -131,23 +146,35 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.SceneUnderstanding
                     prefab.transform.SetParent(InstantiatedParent);
                 }
                 instantiatedPrefabs.Add(prefab);
+
+                //added, experimental?
+                prefab.GetComponent<MeshRenderer>().material = funMaterials[Random.Range(0, funMaterials.Length)];
+
             }
             else
             {
+                /*
                 foreach (var quad in eventData.SpatialObject.Quads)
                 {
                     quad.GameObject.GetComponent<Renderer>().material = funMaterials[Random.Range(0, funMaterials.Length)];
                     //quad.GameObject.GetComponent<Renderer>().material.color = ColorForSurfaceType(eventData.SpatialObject.SurfaceType);
                 }
-
+                */
             }
         }
 
         /// <inheritdoc />
         public void OnObservationUpdated(MixedRealitySpatialAwarenessEventData<SpatialAwarenessSceneObject> eventData)
         {
+            Debug.Log("On Observation Updated");
             UpdateData(eventData.Id);
-            
+            //added, experiment?
+            foreach (var quad in eventData.SpatialObject.Quads)
+            {
+                quad.GameObject.GetComponent<Renderer>().material = funMaterials[Random.Range(0, funMaterials.Length)];
+                //quad.GameObject.GetComponent<Renderer>().material.color = ColorForSurfaceType(eventData.SpatialObject.SurfaceType);
+            }
+
             if (observedSceneObjects.TryGetValue(eventData.SpatialObject.SurfaceType, out Dictionary<int, SpatialAwarenessSceneObject> sceneObjectDict))
             {
                 observedSceneObjects[eventData.SpatialObject.SurfaceType][eventData.Id] = eventData.SpatialObject;
