@@ -9,12 +9,19 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 0
-    path: Assets/Samples/Mixed Reality Toolkit Examples/2.7.3/Demos - HandTracking/Scenes/HandInteractionExamples.unity
-    guid: 3dd4a396b5225f8469b9a1eb608bfa57
-  - enabled: 1
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/ReaktionTest.unity
     guid: 0031de1a91f718b4eac75f12dda1a037
+  - enabled: 0
+    path: Assets/MRTK-MagicLeap/Providers/MagicLeap/Scenes/HandInteractionExamplesMagicLeap.unity
+    guid: cabe4f09b51ef47ebb9dc3db8d75fe37
+  - enabled: 1
+    path: Assets/Scenes/GestureTracking.unity
+    guid: 95610b53eafc707479b5d86b63e759d2
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 0d26d0d022e378c41a50428390e1b08a, type: 2}
+    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: 0ef6bfd03a69de845a8615153eedc608, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 2400d94959aa6684a808689a9e5a2901, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 1993dadba1e330d448183a7e78be8fcb, type: 2}

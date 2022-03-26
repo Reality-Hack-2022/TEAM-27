@@ -131,8 +131,17 @@ PlayerSettings:
   preloadedAssets:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: -4926218755300067834, guid: 1993dadba1e330d448183a7e78be8fcb, type: 2}
-  - {fileID: -6982333037406973822, guid: 2400d94959aa6684a808689a9e5a2901, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: -309652618075484835, guid: 2400d94959aa6684a808689a9e5a2901, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 0ef6bfd03a69de845a8615153eedc608, type: 2}
+  - {fileID: 5665721053975699003, guid: 1993dadba1e330d448183a7e78be8fcb, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -323,6 +332,15 @@ PlayerSettings:
     m_Automatic: 0
   - m_BuildTarget: WebGLSupport
     m_APIs: 0b000000
+    m_Automatic: 0
+  - m_BuildTarget: WindowsStandaloneSupport
+    m_APIs: 1100000002000000
+    m_Automatic: 0
+  - m_BuildTarget: MacStandaloneSupport
+    m_APIs: 1100000010000000
+    m_Automatic: 0
+  - m_BuildTarget: LinuxStandaloneSupport
+    m_APIs: 1100000015000000
     m_Automatic: 0
   m_BuildTargetVRSettings: []
   openGLRequireES31: 0
@@ -593,7 +611,19 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    14: 
+    1: MAGICLEAP
+    7: MAGICLEAP
+    13: MAGICLEAP
+    14: MAGICLEAP
+    19: MAGICLEAP
+    21: MAGICLEAP
+    25: MAGICLEAP
+    27: MAGICLEAP
+    28: MAGICLEAP
+    29: MAGICLEAP
+    30: MAGICLEAP
+    32: MAGICLEAP
+    33: MAGICLEAP
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
@@ -682,7 +712,7 @@ PlayerSettings:
     m_ModelFolderPath: 
     m_PortalFolderPath: 
   luminCert:
-    m_CertPath: 
+    m_CertPath: C:/Users/user/Downloads/mlcert/team27.cert
     m_SignPackage: 1
   luminIsChannelApp: 0
   luminVersion:
