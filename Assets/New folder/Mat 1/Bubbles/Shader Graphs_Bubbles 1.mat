@@ -37,7 +37,7 @@ Material:
     - Vector1_A4D26BEC: 10
     - Vector1_C0AF5932: 0.1
     - Vector1_DDE46524: 0.5
-    - _AddAlpha: 0.536
-    - _SplashesSpeed: 0.026548773
+    - _AddAlpha: 0.66167736
+    - _SplashesSpeed: 3.6953056e-19
     m_Colors: []
   m_BuildTextureStacks: []
