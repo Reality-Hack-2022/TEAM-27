@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Reaktion;
 
 public class AudioStem : MonoBehaviour
 {
@@ -9,15 +10,9 @@ public class AudioStem : MonoBehaviour
         public AudioSource harmonySource;
     public AudioSource rhythmKickReaktion;
     public AudioSource rhythmSnareReaktion;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+    public Reaktor debugKickReaktor;
+    public Reaktor debugSnareReaktor;
+
 }

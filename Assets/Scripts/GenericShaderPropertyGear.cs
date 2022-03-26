@@ -50,7 +50,8 @@ public class GenericShaderPropertyGear : MonoBehaviour
 
     void UpdateTarget(float param)
     {
-            rend.material.SetFloat(floatParameterName, parameterSlope.Evaluate(param));
+            Debug.Log("Setting float of " + floatParameterName + " to " + parameterSlope.Evaluate(param));
+            rend.sharedMaterial.SetFloat(floatParameterName, parameterSlope.Evaluate(param));
         //target.Invoke(gradient.Evaluate(param));
     }
 }
