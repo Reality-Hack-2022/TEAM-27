@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Reaktion;
 
 public class Team27GestureAudio : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class Team27GestureAudio : MonoBehaviour
     public enum WhichWall { Wall1, Wall2, Wall3, Wall4}
     public List<AudioStem> activeStems;
     public AudioStem[] stems;
+
+    public Reaktor kickReaktor;
+    public Reaktor snareReaktor;
 
     void Awake()
     {
@@ -33,6 +37,8 @@ public class Team27GestureAudio : MonoBehaviour
             stem.rhythmSource.Play();
             stem.harmonySource.volume = 0f;
             stem.harmonySource.Play();
+            stem.rhythmKickReaktion.Play();
+            stem.rhythmSnareReaktion.Play();
         }
     }
 
@@ -90,10 +96,11 @@ public class Team27GestureAudio : MonoBehaviour
             activeStems[0].rhythmSource.volume = 1f;
             activeStems[0].harmonySource.volume = 1f;
         activeStems[0].rhythmKickReaktion.volume = 1f;
+        kickReaktor.injector = activeStems[0].debugKickReaktor.injector;
         activeStems[0].rhythmSnareReaktion.volume = 1f;
-        
+        snareReaktor.injector = activeStems[0].debugSnareReaktor.injector;
 
-            
+
     }
 
 }

@@ -14,7 +14,7 @@ public class TriggerScatter : MonoBehaviour
 		//public string floatParameterName4;
         public GameObject audioreact;
         public VisualEffect yourVisualEffect;
-		public AudioSource audiostem;
+		 AudioSource audiostem;
 		public GameObject audiostemhome;
 		
   

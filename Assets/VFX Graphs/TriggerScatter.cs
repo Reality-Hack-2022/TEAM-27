@@ -16,12 +16,15 @@ public class TriggerScatter : MonoBehaviour
         public VisualEffect yourVisualEffect;
 		 AudioSource audiostem;
 		public GameObject audiostemhome;
+	public float fadeOutTime = 5f;
 		
   
 	 void Start()
     {
 		 audiostem = audiostemhome.GetComponent<AudioSource>();
     } 
+	
+	
   
   
     void OnTriggerEnter(Collider other)
@@ -46,6 +49,17 @@ public class TriggerScatter : MonoBehaviour
 	  // yourVisualEffect.SetFloat(floatParameterName3, 0.0f);
 	   //yourVisualEffect.SetFloat(floatParameterName4, 0.0f);
 	   audioreact.SetActive(false);
-	   audiostem.Stop();	
+		//audiostem.Stop();	
+		StartCoroutine(FadeOut());
+    }
+
+	IEnumerator FadeOut()
+    {
+		for(float i = 1; i >=0; i -= .1f)
+        {
+			audiostem.volume = i;
+			yield return new WaitForSeconds(fadeOutTime / 10f);
+        }
+		audiostem.Stop();
     }
 }

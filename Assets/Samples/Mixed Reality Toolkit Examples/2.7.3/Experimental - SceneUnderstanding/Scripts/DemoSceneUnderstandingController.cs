@@ -16,6 +16,8 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.SceneUnderstanding
     public class DemoSceneUnderstandingController : DemoSpatialMeshHandler, IMixedRealitySpatialAwarenessObservationHandler<SpatialAwarenessSceneObject>
     {
         public Material[] funMaterials;
+        public bool putInNewWorld;
+        public int inNewWorldLayerInt;
 
         #region Private Fields
 
@@ -130,6 +132,10 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.SceneUnderstanding
                 Debug.Log(eventData.SpatialObject.GameObject.name + " is having its material changed, allegedly, to: " + chosenMat);
             MeshRenderer newRenderer = eventData.SpatialObject.GameObject.GetComponentInChildren<MeshRenderer>();
             newRenderer.material = chosenMat;
+            if (putInNewWorld)
+            {
+                newRenderer.gameObject.layer = inNewWorldLayerInt;
+            }
                 //quad.GameObject.GetComponent<Renderer>().material.color = ColorForSurfaceType(eventData.SpatialObject.SurfaceType);
             
             Debug.Log("After foreach loop.");
