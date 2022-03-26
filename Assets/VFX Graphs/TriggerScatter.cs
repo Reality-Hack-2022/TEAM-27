@@ -23,6 +23,8 @@ public class TriggerScatter : MonoBehaviour
     {
 		 audiostem = audiostemhome.GetComponent<AudioSource>();
     } 
+	
+	
   
   
     void OnTriggerEnter(Collider other)
