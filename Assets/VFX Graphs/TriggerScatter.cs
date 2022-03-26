@@ -18,4 +18,9 @@ public class TriggerScatter : MonoBehaviour
 	   Debug.Log("entered");
     }
    
+    void OnTriggerExit(Collider other)
+    {
+       yourVisualEffect.SetFloat(floatParameterName, 0.01f);
+	   Debug.Log("exited");
+    }
 }

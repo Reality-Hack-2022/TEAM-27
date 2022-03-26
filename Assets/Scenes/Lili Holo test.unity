@@ -3550,7 +3550,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &901435822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9587,8 +9587,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed025477d3c76b545bf9c25e536f0a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownPanel: {fileID: 0}
-  countdownText: {fileID: 0}
+  countdownPanel: {fileID: 901435821}
+  countdownText: {fileID: 126966548}
   leftHandTransform: {fileID: 1997033247}
   rightHandTransform: {fileID: 1997033247}
   leftHandTrigger: {fileID: 1403024584}
