@@ -15,6 +15,7 @@ public class TriggerScatter : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
        yourVisualEffect.SetFloat(floatParameterName, 0.62f);
+	   Debug.Log("entered");
     }
    
 }
