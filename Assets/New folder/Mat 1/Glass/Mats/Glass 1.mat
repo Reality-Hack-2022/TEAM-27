@@ -8,8 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Glass 1
-  m_Shader: {fileID: -6465566751694194690, guid: 15db336a3d3325c4eb87414ead816491,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 15db336a3d3325c4eb87414ead816491, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -28,6 +27,18 @@ Material:
         m_Texture: {fileID: 2800000, guid: 2d88e355a909c7d41877f11a02db3bab, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_55516576: 0
     - Vector1_70323E7F: 1
@@ -37,6 +48,7 @@ Material:
     - Vector1_AD054B11: 0.07
     - Vector1_C0B9FE29: 1
     - Vector1_DA1046B9: 1
-    - Vector1_FCA6D949: 0.19
+    - Vector1_FCA6D949: -1
     m_Colors:
     - Color_A94873D1: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []

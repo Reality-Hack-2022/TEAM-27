@@ -1276,7 +1276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &298890278
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -1352,7 +1352,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 298890277}
   serializedVersion: 7
-  lengthInSec: 5
+  lengthInSec: 9.81
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -1479,30 +1479,30 @@ ParticleSystem:
         m_RotationOrder: 4
     startSpeed:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
+      minMaxState: 1
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0
-          value: 1
+          time: 0.01102066
+          value: 0.05405426
           inSlope: 0
           outSlope: 0
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
         - serializedVersion: 3
-          time: 1
+          time: 0.9779614
           value: 1
-          inSlope: 0
-          outSlope: 0
+          inSlope: 2
+          outSlope: 2
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -1596,7 +1596,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.75
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -2299,62 +2299,17 @@ ParticleSystem:
           outSlope: 0
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 0.28861684
-          value: 0.1312224
-          inSlope: 0.99999994
-          outSlope: 0.99999994
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 0.4350047
-          value: 0.88439894
-          inSlope: -7.892898
-          outSlope: -7.892898
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.42540756
-        - serializedVersion: 3
-          time: 0.69678915
-          value: 0.4402992
-          inSlope: 6.633353
-          outSlope: 6.633353
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.3612389
-        - serializedVersion: 3
-          time: 0.88186556
-          value: 0.88186556
-          inSlope: -4.7278967
-          outSlope: -4.7278967
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.63617194
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 0.9618257
-          value: 1
-          inSlope: -12.535928
-          outSlope: -12.535928
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.854727
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
         - serializedVersion: 3
           time: 1
-          value: 0
-          inSlope: 1
-          outSlope: 1
+          value: 0.10810852
+          inSlope: 2
+          outSlope: 2
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -4039,7 +3994,7 @@ ParticleSystem:
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.72
+      scalar: 0.82
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4196,7 +4151,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.5
+    frequency: 1.05
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
@@ -4418,7 +4373,7 @@ ParticleSystem:
     positionAmount:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 4.32
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5340,7 +5295,7 @@ ParticleSystem:
         m_RotationOrder: 4
     minVertexDistance: 0.2
     textureMode: 0
-    ribbonCount: 1
+    ribbonCount: 10
     shadowBias: 0.5
     worldSpace: 0
     dieWithParticles: 1
@@ -5348,7 +5303,7 @@ ParticleSystem:
     sizeAffectsLifetime: 0
     inheritParticleColor: 1
     generateLightingData: 0
-    splitSubEmitterRibbons: 0
+    splitSubEmitterRibbons: 1
     attachRibbonsToTransform: 0
     colorOverLifetime:
       serializedVersion: 2
@@ -10169,7 +10124,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &993175321
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10202,7 +10157,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7a265de20eddadf44b42a0d59c133efd, type: 2}
+  - {fileID: 2100000, guid: c24feb1697b538c47a25665effca639e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14973,15 +14928,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   funMaterials:
-  - {fileID: 2100000, guid: bf14b18eb1b3d6c428d12c929591ab32, type: 2}
-  - {fileID: 2100000, guid: 8cfc0a2439fa99542ace83ba5fee879e, type: 2}
-  - {fileID: 2100000, guid: 6caf7fe4a273ed24594920209827d097, type: 2}
-  - {fileID: 2100000, guid: 5f2392bd04f387a4aa3a10dd0bc5c39c, type: 2}
-  - {fileID: 2100000, guid: f759d8aaa1eddb34bb0bd3cc7048e4ea, type: 2}
-  - {fileID: 2100000, guid: d0acdde9500f25a49b2033a4ec0d9cf2, type: 2}
-  - {fileID: 2100000, guid: 88b5496bf791b44408175cfd59744ebe, type: 2}
-  - {fileID: 2100000, guid: b12aa618262fd924193adbc888318100, type: 2}
-  - {fileID: 2100000, guid: 915fcfb46376c9d48bdae8c9e8545198, type: 2}
+  - {fileID: 2100000, guid: 0ce784b5e7bef4b46b95eefa4b34012a, type: 2}
+  - {fileID: 2100000, guid: d959f9aa2645f0e4d9f720854cb743fb, type: 2}
+  - {fileID: 2100000, guid: 0d67f9b48609e844c827b47a227509da, type: 2}
   SavedSceneNamePrefix: Scene
   InstantiatePrefabs: 0
   InstantiatedPrefab: {fileID: 4450459432874784414, guid: da7ef0d2c42bf8f4da89848ed8529a9f, type: 3}
