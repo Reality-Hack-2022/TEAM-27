@@ -21,7 +21,7 @@ MonoBehaviour:
   updateOnceInitialized: 1
   autoUpdate: 1
   defaultPhysicsLayer: 31
-  surfaceTypes: 2
+  surfaceTypes: 94
   instantiationBatchRate: 10
   defaultMaterial: {fileID: 2100000, guid: a2137747e94e9744b9c97181972d0ed8, type: 2}
   defaultWorldMeshMaterial: {fileID: 2100000, guid: f6d42d214eaa65e44965e766112eb678, type: 2}

@@ -59,6 +59,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_73A18E88: 1
     - Boolean_DD5A9A0: 0
@@ -66,7 +78,7 @@ Material:
     - Vector1_29ADD563: 0.05
     - Vector1_2D83228F: 6.3
     - Vector1_47677611: 0.035
-    - Vector1_54EC8D1B: 5
+    - Vector1_54EC8D1B: 0
     - Vector1_5B8BD7A: 0.5
     - Vector1_67434760: 6.06
     - Vector1_814530F0: 0.839
@@ -83,7 +95,7 @@ Material:
     - Vector1_CBD19B6D: 0
     - Vector1_DEAA95EA: 24.5
     - Vector1_E0D0D54F: 1.98
-    - Vector1_EB0BDD0D: 0.17
+    - Vector1_EB0BDD0D: 0
     - Vector1_FA5BD4D7: 0.03
     - _AlphaClip: 0
     - _Blend: 0
